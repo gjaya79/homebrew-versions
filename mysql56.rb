@@ -20,7 +20,7 @@ class Mysql56 < Formula
   option "with-debug", "Build with debug support"
 
   depends_on "cmake" => :build
-  depends_on "pidof" unless MacOS.version >= :mountain_lion
+  depends_on "pidof" unless MacOS.version >= :mountain_lion || !OS.mac?
   depends_on "openssl"
 
   deprecated_option "enable-local-infile" => "with-local-infile"
